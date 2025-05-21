@@ -104,7 +104,7 @@ function DescriptionCard({ theme = "dark" }) {
               {/* Buttons & Socials */}
               <div className="flex flex-col sm:flex-row sm:items-center gap-4">
                 <a
-                  href="/docs/Osanda Lakruwan Resume.pdf"
+                  href="/images/Osanda Lakruwan Resume.pdf"
                   download
                   className="bg-gradient-to-r from-purple-500 via-black to-blue-500 hover:from-blue-600 hover:via-purple-300 to-purple-500 text-white font-semibold px-6 py-2 rounded-full transition duration-300 shadow-md text-center"
                 >
