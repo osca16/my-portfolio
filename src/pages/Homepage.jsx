@@ -19,12 +19,11 @@ function Homepage() {
   const { ref: contactsRef, inView: isContactInView } = useInView({ threshold: 0.5 });
 
   useEffect(() => {
-  if (isContactInView) setCurrentSection("contact");
-  else if (isSkillsInView) setCurrentSection("skills");
-  else if (isProjInView) setCurrentSection("projects");
-  else if (isDescInView) setCurrentSection("home");
-}, [isSkillsInView, isProjInView, isDescInView, isContactInView]);
-
+    if (isContactInView) setCurrentSection("contact");
+    else if (isSkillsInView) setCurrentSection("skills");
+    else if (isProjInView) setCurrentSection("projects");
+    else if (isDescInView) setCurrentSection("home");
+  }, [isSkillsInView, isProjInView, isDescInView, isContactInView]);
 
   return (
     <div className="relative bg-black text-white min-h-screen">
@@ -44,9 +43,11 @@ function Homepage() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="min-h-screen flex items-center justify-center"
+            className="min-h-screen flex items-center justify-center px-4 sm:px-6"
           >
-            <Description />
+            <div className="max-w-screen-lg w-full text-center sm:text-left">
+              <Description />
+            </div>
           </motion.section>
 
           {/* Projects Section */}
@@ -56,11 +57,13 @@ function Homepage() {
             initial={{ opacity: 0, y: 100 }}
             animate={isProjInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
             transition={{ duration: 0.9, ease: "easeOut" }}
-            className="min-h-screen flex items-center justify-center"
+            className="min-h-screen flex items-center justify-center px-4 sm:px-6"
           >
-            <Suspense fallback={<div className="text-white">Loading Projects...</div>}>
-              <LazyProjects />
-            </Suspense>
+            <div className="max-w-screen-lg w-full">
+              <Suspense fallback={<div className="text-white">Loading Projects...</div>}>
+                <LazyProjects />
+              </Suspense>
+            </div>
           </motion.section>
 
           {/* Skills Section */}
@@ -70,24 +73,29 @@ function Homepage() {
             initial={{ opacity: 0, y: 100 }}
             animate={isSkillsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
             transition={{ duration: 0.9, ease: "easeOut" }}
-            className="min-h-screen flex items-center justify-center"
+            className="min-h-screen flex items-center justify-center px-4 sm:px-6"
           >
-            <Suspense fallback={<div className="text-white">Loading Skills...</div>}>
-              <LazySkills />
-            </Suspense>
+            <div className="max-w-screen-lg w-full">
+              <Suspense fallback={<div className="text-white">Loading Skills...</div>}>
+                <LazySkills />
+              </Suspense>
+            </div>
           </motion.section>
 
-           <motion.section
+          {/* Contact Section */}
+          <motion.section
             id="contact"
             ref={contactsRef}
             initial={{ opacity: 0, y: 100 }}
             animate={isContactInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
             transition={{ duration: 0.9, ease: "easeOut" }}
-            className="min-h-screen flex items-center justify-center"
+            className="min-h-screen flex items-center justify-center px-4 sm:px-6"
           >
-            <Suspense fallback={<div className="text-white">Loading Contact...</div>}>
-              <LazyContact />
-            </Suspense>
+            <div className="max-w-screen-lg w-full">
+              <Suspense fallback={<div className="text-white">Loading Contact...</div>}>
+                <LazyContact />
+              </Suspense>
+            </div>
           </motion.section>
         </main>
 
