@@ -30,7 +30,7 @@ const projects = [
     title: "My E Portfolio",
     description: "My E Portfolio with React/threejs/JavaScript and TailwindCSS ",
     image: "./src/assets/images/Eportfolio.png",
-    github: "https://github.com/osca16/Pet-Care-Web-Site",
+    github: "https://github.com/osca16/my-portfolio/",
     live: "#",
   },{
     id: 5,
