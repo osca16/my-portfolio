@@ -13,9 +13,9 @@ const LazyContact = React.lazy(() => import("../components/Contact"));
 function Homepage() {
   const [currentSection, setCurrentSection] = useState("home");
 
-  const { ref: descriptionRef, inView: isDescInView } = useInView({ threshold: 0.5 });
-  const { ref: projectsRef, inView: isProjInView } = useInView({ threshold: 0.2 });
-  const { ref: skillsRef, inView: isSkillsInView } = useInView({ threshold: 0.3 });
+  const { ref: descriptionRef, inView: isDescInView } = useInView({ threshold: 0.3 });
+  const { ref: projectsRef, inView: isProjInView } = useInView({ threshold: 0.3 });
+  const { ref: skillsRef, inView: isSkillsInView } = useInView({ threshold: 0.2 });
   const { ref: contactsRef, inView: isContactInView } = useInView({ threshold: 0.5 });
 
   useEffect(() => {

@@ -12,7 +12,7 @@ function Header({ activeSection }) {
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-black via-gray-600 to-black shadow-lg"
+      className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-black to-black shadow-lg"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between relative">
         {/* Logo and SVG Path Animation */}
