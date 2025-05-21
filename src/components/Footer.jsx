@@ -44,7 +44,7 @@ function Footer() {
             <SiLinkedin />
           </motion.a>
           <motion.a
-            href="mailto:osanda@example.com"
+            href="mailto:osandalakruwan516@gmail.com"
             className="hover:text-red-400 transition"
             whileHover={{ scale: 1.2 }}
           >
